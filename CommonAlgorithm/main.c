@@ -7,9 +7,13 @@
 //
 
 #include <stdio.h>
+#include "config.h"
 
-int main(int argc, const char * argv[]) {
+int test_main(int argc, const char * argv[]) {
     // insert code here...
-    printf("Hello, World!\n");
+    char P[] = "ababaca";
+    int next[7] = {0,};
+    computePrefix(P, next);
     return 0;
 }
+
