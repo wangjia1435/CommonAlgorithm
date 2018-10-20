@@ -103,12 +103,12 @@ unsigned int dictGenCaseHashFunction(const unsigned char *buf, int len) {
     return hash;
 }
 
-void main(void)
+void intergerHash_main(void)
 {
     int i;
     for(i=0; i<100; i++)
     {
-        printf("hash valve = %d ",dicIntHashFunction(random()));
+        printf("hash valve = %d\n ",dicIntHashFunction(i));
     }
 
 }
