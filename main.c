@@ -46,7 +46,7 @@ int main(int argc, const char * argv[]) {
     }
     else
     {
-                printf("pid=%d gloab=%d var=%d\n",getpid(), gloab, var);```2
+                printf("pid=%d gloab=%d var=%d\n",getpid(), gloab, var);
     }
 
     exit(0);
