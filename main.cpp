@@ -10,15 +10,21 @@
 #include "config.h"
 #include <sys/types.h>
 #include <unistd.h>
+#include "./design_mode/simple_factory.hpp"
 
 int gloab=6;
 
 
 int main(int argc, const char * argv[]) {
     // insert code here...
+    fruit_factory a;
+    fruit* b=a.get_instance(1);
+    fruit* c=a.get_instance(2);
+    
+    //fruit* b=a.get_instance(1);
     char P[] = "ababaca";
     int next[7] = {0,};
-    computePrefix(P, next);
+    //computePrefix(P, next);
     printf("hello world\n");
     printf("pid=%d\n",getpid());
     printf("before fork \n");
