@@ -10,22 +10,16 @@
 #include "config.h"
 #include <sys/types.h>
 #include <unistd.h>
-#include "./design_mode/simple_factory.hpp"
-
-int gloab=6;
+#include "design_mode/builder/director.h"
+#include "design_mode/builder/builder.h"
+#include "design_mode/simple_factory/simple_factory.hpp"
+#include "design_mode/adpter/adpter_test.h"
+#include "design_mode/bridge/bridge_test.h"
+int gloab=6; 
 
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    fruit_factory a;
-    fruit* b=a.get_instance(1);
-    fruit* c=a.get_instance(2);
-    
-    //fruit* b=a.get_instance(1);
-    char P[] = "ababaca";
-    int next[7] = {0,};
-    //computePrefix(P, next);
-    printf("hello world\n");
+	bridge_test();
     printf("pid=%d\n",getpid());
     printf("before fork \n");
     
@@ -52,11 +46,12 @@ int main(int argc, const char * argv[]) {
     }
     else
     {
-                printf("pid=%d gloab=%d var=%d\n",getpid(), gloab, var);
+        printf("pid=%d gloab=%d var=%d\n",getpid(), gloab, var);
     }
 
     exit(0);
     
     return 0;
 }
+
 
