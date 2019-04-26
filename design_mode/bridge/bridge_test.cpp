@@ -10,7 +10,7 @@
 类说明：
 	implementorA,implementorB 实现类A，B（类似与绿、红色）
 	implementor               实现基类(颜色）
-	abstractionA，abstractionA 抽象类A，B（类似与形状 圆、方）
+	abstractionA，abstractionB 抽象类A，B（类似与形状 圆、方）
 	abstraction                抽象基类（形状）
 	其中抽象类关联了实现类来实现桥接，组合
 */

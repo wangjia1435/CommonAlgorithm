@@ -15,11 +15,12 @@
 #include "design_mode/simple_factory/simple_factory.hpp"
 #include "design_mode/adpter/adpter_test.h"
 #include "design_mode/bridge/bridge_test.h"
+#include "design_mode/decorator/decorator_test.h"
 int gloab=6; 
 
 
 int main(int argc, const char * argv[]) {
-	bridge_test();
+	decorator_test();
     printf("pid=%d\n",getpid());
     printf("before fork \n");
     
