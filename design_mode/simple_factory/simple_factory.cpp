@@ -48,7 +48,8 @@ fruit* fruit_factory::get_instance(int type)
     {
         return new pear();
     }
-    else{
+    else
+	{
         return nullptr;
     }
 }

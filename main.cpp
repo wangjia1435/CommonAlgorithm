@@ -16,42 +16,15 @@
 #include "design_mode/adpter/adpter_test.h"
 #include "design_mode/bridge/bridge_test.h"
 #include "design_mode/decorator/decorator_test.h"
-int gloab=6; 
+#include "design_mode/facade/facade_test.h"
+#include "design_mode/flyweight/flyweight_test.h"
+#include "design_mode/proxy/proxy_test.h"
+#include "design_mode/command/command_test.h"
+#include "os/fork/fork.h"
 
 
 int main(int argc, const char * argv[]) {
-	decorator_test();
-    printf("pid=%d\n",getpid());
-    printf("before fork \n");
-    
-    pid_t pid;
-    int var=88;
-    if((pid = fork())<0)
-    {
-        printf("fork error\n");
-    }
-    else if(pid==0)
-    {
-        gloab++;
-        var++;
-    }
-    else
-    {
-        sleep(2);
-    }
-    
-    if(pid==0)
-    {
-        printf("this is child\n");
-        printf("pid=%d gloab=%d var=%d\n",getpid(), gloab, var);
-    }
-    else
-    {
-        printf("pid=%d gloab=%d var=%d\n",getpid(), gloab, var);
-    }
-
-    exit(0);
-    
+	command_test();
     return 0;
 }
 
